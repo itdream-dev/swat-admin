@@ -87,7 +87,7 @@
 							<img src="/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="/assets/images/!logged-user.jpg" />
 						</figure>
 						<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-							<span class="name">Sky Clean</span>
+							<span class="name">admin438</span>
 							<span class="role">administrator</span>
 						</div>
 

@@ -29,7 +29,7 @@
                     </div>
                   </div>
                   <div class="summary-footer">
-                    <!-- <a class="text-muted text-uppercase">More</a> -->
+
                   </div>
                 </div>
               </div>
@@ -53,7 +53,7 @@
                     </div>
                   </div>
                   <div class="summary-footer">
-                    <!-- <a class="text-muted text-uppercase">More</a> -->
+
                   </div>
                 </div>
               </div>
@@ -77,7 +77,7 @@
                     </div>
                   </div>
                   <div class="summary-footer">
-
+                    
                   </div>
                 </div>
               </div>
