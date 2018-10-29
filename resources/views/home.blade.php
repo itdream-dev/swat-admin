@@ -77,7 +77,57 @@
                     </div>
                   </div>
                   <div class="summary-footer">
-                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-md-12 col-lg-6 col-xl-4">
+          <section class="panel panel-featured-left panel-featured-secondary">
+            <div class="panel-body">
+              <div class="widget-summary">
+                <div class="widget-summary-col widget-summary-col-icon">
+                  <div class="summary-icon bg-secondary">
+                    <i class="fa fa-clock-o"></i>
+                  </div>
+                </div>
+                <div class="widget-summary-col">
+                  <div class="summary">
+                    <h4 class="title">Airdropping Cycle Time</h4>
+                    <div class="info">
+                      <strong class="amount">{{$mining_time_period}} minutes</strong>
+                    </div>
+                  </div>
+                  <div class="summary-footer">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-md-12 col-lg-6 col-xl-4">
+          <section class="panel panel-featured-left panel-featured-secondary">
+            <div class="panel-body">
+              <div class="widget-summary">
+                <div class="widget-summary-col widget-summary-col-icon">
+                  <div class="summary-icon bg-secondary">
+                    <i class="fa fa-clock-o"></i>
+                  </div>
+                </div>
+                <div class="widget-summary-col">
+                  <div class="summary">
+                    <h4 class="title">Last Airdropped Time</h4>
+                    <div class="info">
+                      <strong class="amount">{{$last_minted_time}}</strong>
+                    </div>
+                  </div>
+                  <div class="summary-footer">
+
                   </div>
                 </div>
               </div>

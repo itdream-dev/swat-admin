@@ -50,7 +50,9 @@ class HomeController extends Controller
         return view('home', [
           'online_count' => $online_count,
           'device_count' => count($devices),
-          'minting_speed' => $minting_speed
+          'minting_speed' => $minting_speed,
+          'last_minted_time' => $settings['last_minted_time'],
+          'mining_time_period' => $settings['mining_time_period'],
         ]);
     }
 }

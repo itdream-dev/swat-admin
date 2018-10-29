@@ -76,11 +76,14 @@ class SettingController extends Controller
         // $code = Setting::firstOrCreate(["name" => "minting_private_key"]);
         // $code->value = $request->get('minting_private_key');
         // $code->save();
+        $code = Setting::firstOrCreate(["name" => "minting_min_value"]);
+        $code->value = $request->get('minting_min_value');
+        $code->save();
 
         $code = Setting::firstOrCreate(["name" => "mining_time_period"]);
         $code->value = $request->get('mining_time_period');
         $code->save();
 
-        return back()->with('success',"Settings have been successfully saved.");        
+        return back()->with('success',"Settings have been successfully saved.");
     }
 }
