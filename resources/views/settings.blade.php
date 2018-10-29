@@ -63,7 +63,7 @@
 								<label class="col-md-3 control-label label-left" for="is_test_net">Test Net ?</label>
 								<div class="col-md-6">
 									<div class="switch switch-primary">
-										<input type="checkbox" id="is_test_net" name="is_test_net" onchange="ResetStatus()" value='0' data-plugin-ios-switch  @if(isset($settings['is_test_net']) && $settings['is_test_net']) checked="checked" @endif/>
+										<input type="checkbox" id="is_test_net" name="is_test_net" onchange="ResetStatus()" value="{{$settings['is_test_net']}}" data-plugin-ios-switch  @if(isset($settings['is_test_net']) && $settings['is_test_net']) checked="checked" @endif/>
 									</div>
 								</div>
 							</div>

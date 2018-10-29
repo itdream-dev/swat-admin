@@ -77,7 +77,7 @@ class DeviceController extends Controller
       $device->is_miniting = 0;
       if (!$device->status) continue;
       $mytime = Carbon::now();
-      $mintings = Minting::whereBetween('updated_at', [$mytime->subMinutes(1), $mytime])->get();
+      $mintings = Minting::whereBetween('updated_at', [$mytime->subMinutes(2), $mytime])->get();
       Log::info($mintings);
       if (count($mintings) > 0){
         $device->is_miniting = 1;
