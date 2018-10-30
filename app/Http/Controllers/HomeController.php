@@ -34,7 +34,7 @@ class HomeController extends Controller
           $device->is_miniting = 0;
           if (!$device->status) continue;
           $mytime = Carbon::now();
-          $mintings = Minting::where('updated_at', '>', $mytime->subMinutes(2)->toDateTimeString())->get();
+          $mintings = Minting::where('device_id', $device->id)->where('updated_at', '>', $mytime->subMinutes(2)->toDateTimeString())->get();
           Log::info($mintings);
           if (count($mintings) > 0){
             $online_count++;
