@@ -60,6 +60,13 @@
               </div>
 
               <div class="form-group">
+                <label class="col-md-3 control-label label-left" for="minting_min_value">Reward Amount (SWAT per once)<span class="required">*</span></label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="reward_amount_per_once" name="reward_amount_per_once" value="{{isset($settings['reward_amount_per_once'])? $settings["reward_amount_per_once"]:''}}" required>
+                </div>
+              </div>
+
+              <div class="form-group">
 								<label class="col-md-3 control-label label-left" for="is_test_net">Test Net ?</label>
 								<div class="col-md-6">
 									<div class="switch switch-primary">
