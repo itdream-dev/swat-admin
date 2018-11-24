@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Device;
 class Minted extends Model
 {
-	protected $fillable = ['device_id', 'wallet_address', 'minted_amount'];
+	protected $fillable = ['device_id', 'wallet_address', 'minted_amount', 'transaction_id'];
 
 	public function device()
 	{

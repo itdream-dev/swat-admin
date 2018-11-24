@@ -124,7 +124,8 @@ class Airdropping extends Command
               Minted::create([
                 'device_id' => $item->device_id,
                 'wallet_address' => $item->address,
-                'minted_amount' => $settings['minting_min_value']
+                'minted_amount' => $settings['minting_min_value'],
+                'transaction_id' => $res->res
               ]);
               $item->mint_amount = $item->mint_amount - $settings['minting_min_value'];
               $item->save();
