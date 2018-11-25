@@ -125,7 +125,7 @@ class Airdropping extends Command
                 'device_id' => $item->device_id,
                 'wallet_address' => $item->address,
                 'minted_amount' => $settings['minting_min_value'],
-                'transaction_id' => $res->res
+                'transaction_id' => $res->res->hash
               ]);
               $item->mint_amount = $item->mint_amount - $settings['minting_min_value'];
               $item->save();
