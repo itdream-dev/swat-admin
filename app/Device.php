@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Device extends Model
 {
-	protected $fillable = ['wallet_id', 'phone_imei', 'status', 'is_online'];
+	protected $fillable = ['id', 'wallet_id', 'current_address', 'phone_imei', 'status', 'is_online'];
 
 	public function wallet()
 	{

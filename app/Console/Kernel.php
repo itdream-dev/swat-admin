@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\Airdropping::class
+        Commands\Airdropping::class,
+        Commands\Syncing::class
     ];
 
     /**
