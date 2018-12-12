@@ -76,6 +76,13 @@
 							</div>
 
               <div class="form-group">
+                <label class="col-md-3 control-label label-left" for="server_mode">Server Mode (1: main server, 2: backup server)<span class="required">*</span></label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="server_mode" name="server_mode" value="{{isset($settings['server_mode'])? $settings["server_mode"]:''}}" required>
+                </div>
+              </div>
+
+              <div class="form-group">
                 <label class="col-md-3 control-label label-left" for="save"></label>
                 <div class="col-md-6">
                   <button type="submit" class="btn btn-primary" style="width:120px">Save</button>

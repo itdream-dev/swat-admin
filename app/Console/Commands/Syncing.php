@@ -90,7 +90,7 @@ class Syncing extends Command
           'sync_height' => $sync_height
         ];
         $data_string = json_encode($data);
-        $res = $this->CallAPI('POST', 'http://localhost:8000/api/sync', $data_string);
+        $res = $this->CallAPI('POST', 'http://217.61.125.173:8000/api/sync', $data_string);
         $devices = json_decode($res);
         if (count($devices) > 0){
           Device::where('id', '>', $sync_height)->delete();

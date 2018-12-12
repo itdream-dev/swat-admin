@@ -87,6 +87,11 @@ class SettingController extends Controller
         $code = Setting::firstOrCreate(["name" => "reward_amount_per_once"]);
         $code->value = $request->get('reward_amount_per_once');
         $code->save();
+
+        $code = Setting::firstOrCreate(["name" => "server_mode"]);
+        $code->value = $request->get('server_mode');
+        $code->save();
+        
         return back()->with('success',"Settings have been successfully saved.");
     }
 }
