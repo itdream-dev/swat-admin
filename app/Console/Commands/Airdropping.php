@@ -99,13 +99,13 @@ class Airdropping extends Command
         $code->value = Carbon::now()->toDateTimeString();
         $code->save();
 
-        $mintings = Minting::where('mint_amount', '>=', $settings['minting_min_value'])->orderBy('updated_at')->get();        
+        $mintings = Minting::where('mint_amount', '>=', $settings['minting_min_value'])->orderBy('updated_at')->get();
         if (count($mintings) > 0){
           $addresses = [];
           $amounts = [];
           $count = 0;
           foreach ($mintings as $item){
-            $count = $count++;
+            $count = $count + 1;
             array_push($addresses, $item->address);
             array_push($amounts, $settings['minting_min_value']);
             if ($count >= 10) break;
@@ -117,7 +117,7 @@ class Airdropping extends Command
             'amounts' => $amounts
           ];
           $data_string = json_encode($data);
-          //Log::info($data);
+          Log::info($data);
           $res = $this->CallAPI("POST", "http://localhost:3000/api/airdroping", $data_string);
           $res = json_decode($res);
           Log::info('---------------res---------------');
