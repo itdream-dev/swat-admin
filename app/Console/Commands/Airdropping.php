@@ -109,7 +109,7 @@ class Airdropping extends Command
             $count = $count + 1;
             array_push($addresses, $item->address);
             array_push($amounts, $settings['minting_min_value']);
-            if ($count >= 10) break;
+            if ($count >= 5) break;
           }
 
           $data = [
@@ -120,9 +120,10 @@ class Airdropping extends Command
           $data_string = json_encode($data);
           Log::info($data);
           $res = $this->CallAPI("POST", "http://localhost:3000/api/airdroping", $data_string);
-          $res = json_decode($res);
           Log::info('---------------res---------------');
           Log::info($res);
+          $res = json_decode($res);
+
           if ($res->status == 'success'){
             Log::info('-----------------minited success----------------------');
             foreach ($mintings as $item){
