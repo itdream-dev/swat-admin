@@ -91,7 +91,7 @@ class Airdropping extends Command
 
       $now = Carbon::now();
       $totalDuration = $now->diffInMinutes($last);
-
+      Log::info('--------start------------');
       Log::info($totalDuration);
       if ($totalDuration > $settings['mining_time_period']){
 
@@ -144,5 +144,6 @@ class Airdropping extends Command
           }
         }
       }
+      Log::info('--------end------------');
     }
 }
