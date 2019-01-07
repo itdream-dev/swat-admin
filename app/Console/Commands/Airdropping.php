@@ -109,7 +109,7 @@ class Airdropping extends Command
             $count = $count++;
             array_push($addresses, $item->address);
             array_push($amounts, $settings['minting_min_value']);
-            if ($count >= 10) break;            
+            if ($count >= 10) break;
           }
 
           $data = [
@@ -123,6 +123,7 @@ class Airdropping extends Command
           $res = json_decode($res);
 
           if ($res->status == 'success'){
+            Log::info('-----------------minited success----------------------');
             foreach ($mintings as $item){
               Minted::create([
                 'device_id' => $item->device_id,
