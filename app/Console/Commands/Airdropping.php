@@ -107,7 +107,7 @@ class Airdropping extends Command
           $count = 0;
           foreach ($mintings as $item){
             $count = $count + 1;
-            array_push($addresses, $item->address);
+            array_push($addresses, trim($item->address));
             array_push($amounts, $settings['minting_min_value']);
             if ($count >= 10) break;
           }
