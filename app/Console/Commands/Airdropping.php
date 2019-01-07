@@ -109,7 +109,7 @@ class Airdropping extends Command
             $count = $count + 1;
             array_push($addresses, $item->address);
             array_push($amounts, $settings['minting_min_value']);
-            if ($count >= 5) break;
+            if ($count >= 10) break;
           }
 
           $data = [
