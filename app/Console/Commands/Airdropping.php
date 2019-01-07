@@ -100,6 +100,7 @@ class Airdropping extends Command
         $code->save();
 
         $mintings = Minting::where('mint_amount', '>=', $settings['minting_min_value'])->orderBy('updated_at')->get();
+        Log::info(count($mintings));
         if (count($mintings) > 0){
           $addresses = [];
           $amounts = [];
