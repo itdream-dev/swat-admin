@@ -121,7 +121,7 @@ class Airdropping extends Command
           //Log::info($data);
           $res = $this->CallAPI("POST", "http://localhost:3000/api/airdroping", $data_string);
           $res = json_decode($res);
-
+          Log::info($res);
           if ($res->status == 'success'){
             Log::info('-----------------minited success----------------------');
             foreach ($mintings as $item){
