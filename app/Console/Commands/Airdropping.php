@@ -99,8 +99,7 @@ class Airdropping extends Command
         $code->value = Carbon::now()->toDateTimeString();
         $code->save();
 
-        $mintings = Minting::where('mint_amount', '>=', $settings['minting_min_value'])->orderBy('updated_at')->get();
-        Log::info(array($mintings));
+        $mintings = Minting::where('mint_amount', '>=', $settings['minting_min_value'])->orderBy('updated_at')->get();        
         if (count($mintings) > 0){
           $addresses = [];
           $amounts = [];
